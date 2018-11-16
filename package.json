@@ -19,7 +19,10 @@
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^8.0.0",
+    "autoprefixer": "^9.2.0"
   },
   "dependencies": {
     "minimatch": "^3.0.4"
