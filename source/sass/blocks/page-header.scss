@@ -1,0 +1,23 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__logo {
+  height: 85px;
+  background-image: url("http://placehold.it/320x85");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__logo {
+    order: 2;
+    height: 400px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    height: 648px;
+  }
+}
