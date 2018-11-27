@@ -47,7 +47,7 @@
   text-align: center;
   color: rgba(255, 255, 255, 0.3);
 
-  background-color: $bg-darkgrey;
+  background-color: #242424;
 }
 
 .stats__legend--top {
@@ -95,7 +95,7 @@
 
 .stats__value {
   padding-right: 0;
-
+  // font-weight: 700;
   font-size: 40px;
   line-height: 40px;
 }

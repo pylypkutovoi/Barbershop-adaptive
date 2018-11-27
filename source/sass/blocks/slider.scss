@@ -1,0 +1,23 @@
+.slider__input {
+  display: none;
+}
+
+.slider__toggles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 76px;
+  height: 10px;
+}
+
+.slider__toggle {
+  box-sizing: border-box;
+  width: 7px;
+  height: 7px;
+
+  font-size: 0;
+
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(45deg);
+  cursor: pointer;
+}
