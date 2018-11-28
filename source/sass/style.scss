@@ -1,11 +1,14 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "scaffolding.scss";
+@import "blocks/button";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/stats.scss";
-@import "blocks/advantages.scss";
 @import "blocks/site-list.scss";
 @import "blocks/user-list.scss";
+@import "blocks/advantages.scss";
 @import "blocks/slider.scss";
 @import "blocks/news.scss";
+@import "blocks/reviews.scss";
+

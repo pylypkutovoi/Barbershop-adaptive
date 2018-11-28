@@ -91,6 +91,9 @@
       <section class="advantages">
         <div class="advantages__wrapper slider">
           <h2 class="visually-hidden">Наши преимущества</h2>
+            <input class="slider__input" type="radio" name="advantages" id="advantages-1" checked>
+            <input class="slider__input" type="radio" name="advantages" id="advantages-2" >
+            <input class="slider__input" type="radio" name="advantages" id="advantages-3">
           <ul class="advantages__list slider__list">
             <li class="advantages__item advantages__item--fast slider__item">
               <h3 class="advantages__title">Быстро</h3>
@@ -104,12 +107,9 @@
 
             <li class="advantages__item advantages__item--price slider__item">
               <h3 class="advantages__title">Дорого</h3>
-              <p class="advantages__description">Наши мастера - профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не дает определённый статус?</p>
+              <p class="advantages__description">Наши мастера - профессионалы своего делаи не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
             </li>
           </ul>
-            <input class="slider__input" type="radio" name="advantages" id="advantages-1" checked>
-            <input class="slider__input" type="radio" name="advantages" id="advantages-2">
-            <input class="slider__input" type="radio" name="advantages" id="advantages-3">
           <div class="advantages__toggles slider__toggles">
             <label class="slider__toggle" for="advantages-1">1</label>
             <label class="slider__toggle" for="advantages-2">2</label>
@@ -123,22 +123,28 @@
           <h2 class="news__title">Новости и акции</h2>
           <ul class="news__list">
             <li class="news__item">
-              <time class="news__date" datetime="2018-09-29">
-                <b class="news__day">29</b> сент
-              </time>
-              <p class="news__text">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
+              <a class="news__item-wrapper href="#">
+                <time class="news__date" datetime="2018-09-29">
+                  <b class="news__day">29</b> сент
+                </time>
+                <p class="news__text">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
+              </a>
             </li>
             <li class="news__item">
-              <time class="news__date" datetime="2018-09-19">
-                <b class="news__day">19</b> сент
-              </time>
-              <p class="news__text">В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!</p>
+              <a class="news__item-wrapper href="#">
+                <time class="news__date" datetime="2018-09-19">
+                  <b class="news__day">19</b> сент
+                </time>
+                <p class="news__text">В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!</p>
+              </a>
             </li>
             <li class="news__item">
-              <time class="news__date" datetime="2018-09-09">
-                <b class="news__day">09</b> сент
-              </time>
-              <p class="news__text">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</p>
+              <a class="news__item-wrapper href="#">
+                <time class="news__date" datetime="2018-09-09">
+                  <b class="news__day">09</b> сент
+                </time>
+                <p class="news__text">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</p>
+              </a>
             </li>
           </ul>
           <a class="news__to-all button" href="#">Показать все</a>
@@ -148,25 +154,30 @@
       <section class="reviews">
         <div class="reviews_wrapper slider">
           <h2 class="reviews__title">Отзывы о нас</h2>
-          <a class="reviews__write button" href="#">Оставитьсвой</a>
+          <a class="reviews__write button" href="#">Оставить свой</a>
+
+          <input class="slider__input" type="radio" name="reviews" id="reviews-1" checked>
+          <input class="slider__input" type="radio" name="reviews" id="reviews-2">
+          <input class="slider__input" type="radio" name="reviews" id="reviews-3">
+
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item">
               <p class="reviews__author-picture">
-                <img class="reviews__author-image" src="img/picture-travis.jpg" width="50" height="33" alt="Фото Трэвиса баркера">
+                <img class="reviews__author-image" src="img/picture-travis.jpg" alt="Фото Трэвиса баркера">
               </p>
               <cite class="reviews__author-name">Трэвис Баркер</cite>
               <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
             </blockquote>
             <blockquote class="reviews__item slider__item">
               <p class="reviews__author-picture">
-                <img class="reviews__author-image" src="img/picture-john.jpg" width="50" height="33" alt="Фото Джона Смита">
+                <img class="reviews__author-image" src="img/picture-travis.jpg"  alt="Фото Джона Смита">
               </p>
               <cite class="reviews__author-name">Джон Смит</cite>
               <p class="reviews__text">Отличную стрижку мне сделали ребята.</p>
             </blockquote>
             <blockquote class="reviews__item slider__item">
               <p class="reviews__author-picture">
-                <img class="reviews__author-image" src="img/picture-ivan.jpg" width="50" height="33" alt="Фото Ивана Бородайло">
+                <img class="reviews__author-image" src="img/picture-travis.jpg"  alt="Фото Ивана Бородайло">
               </p>
               <cite class="reviews__author-name">Иван Бородайло</cite>
               <p class="reviews__text">В бородинском ваша борода в надёжных руках!</p>
@@ -174,11 +185,13 @@
             <button class="reviews__prev" type="button">Предыдущий отзыв</button>
             <button class="reviews__next" type="button">Следующий отзыв</button>
           </div>
-          <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
-          </p>
+
+          <div class="reviews__toggles slider__toggles">
+            <label class="slider__toggle" for="reviews-1">1</label>
+            <label class="slider__toggle" for="reviews-2">2</label>
+            <label class="slider__toggle" for="reviews-3">3</label>
+          </div>
+
         </div>
       </section>
     </main>
