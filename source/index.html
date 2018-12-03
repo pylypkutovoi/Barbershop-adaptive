@@ -227,9 +227,43 @@
         </div>
       </div>
     </footer>
+
+    <section class="modal-login">
+      <h2 class="modal-login__title">Личный кабинет</h2>
+      <p class="modal-login__description">Введите свой логин и пароль, чтобы войти</p>
+      <form class="modal-login__form" action="#" method="post">
+        <p>
+          <label class="visually-hidden" for="user-login">Логин</label>
+          <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+        </p>
+        <p>
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+        </p>
+
+        <p class="modal-login__help">
+            <label class="modal-login__checkbox">
+              <input class="visually-hidden" type="checkbox" name="remember" >
+              <span class="checkbox-indicator"></span>
+                Запомните меня
+            </label>
+          <a class="restore" href="#">Я забыл пароль!</a>
+        </p>
+        <button class="modal-login__enter button" type="submit">Войти <span>в личный кабинет</span></button>
+        <button class="modal-login__close  button" type="button">Закрыть</button>
+      </form>
+
+    </section>
+
+
+
+
     <script>
       var navMain = document.querySelector('.main-nav');
       var navToggle = document.querySelector('.main-nav__toggle');
+      var link = document.querySelector('.user-list__login');
+      var popup = document.querySelector(".modal-login");
+      var close = popup.querySelector(".modal-login__close");
 
       navMain.classList.remove('main-nav--nojs');
 
@@ -242,6 +276,26 @@
           navMain.classList.remove('main-nav--opened');
         }
       });
+
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.add("modal-login--show");
+      });
+
+      close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("modal-login--show");
+       });
+
+    window.addEventListener("keydown", function(evt){
+      if (evt.keyCode === 27){
+        if (popup.classList.contains("modal-login--show")){
+          evt.preventDefault();
+          popup.classList.remove("modal-login--show");
+          popup.classList.remove("modal-login--show");
+        }
+      }
+    });
     </script>
 
   </body>
