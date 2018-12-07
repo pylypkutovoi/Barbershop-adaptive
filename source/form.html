@@ -2,21 +2,26 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta
+      name ="viewport"
+      content="width=device-width,initial-scale=1">
     <title>Барбершоп «Бородинский»</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="#">
+      <a class="page-header__logo  page-header__logo--inner" href="#">
         <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toogle" type="button">Открыть меню</button>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item">
+            <li class="site-list__item ">
               <a href="index.html">Главная</a>
             </li>
-            <li class="site-list__item ">
+            <li class="site-list__item">
               <a href="photo.html">Наши работы</a>
             </li>
             <li class="site-list__item site-list__item--active">
@@ -31,35 +36,44 @@
           </ul>
           <ul class="main-nav__list user-list">
             <li class="user-list__item">
-              <a class="user-list__login" href="login.html"></a>
+              <a class="user-list__login" href="login.html">
+                <svg class="user-list__login-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 16 16">
+                                <polygon points="0 7 7.01 7 7.01 4.86 10.96 8.01 7.01 11.91
+                            7.01 9.06 0 9.82 0 7" />
+                                <polygon points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99
+                            7.01 16 16 16 16 0 7.01 0"/></svg>
+                Войти
+              </a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <main class="page-main">
-      <div class="form__wrapper">
-        <section class="form">
+    <main class="inner-page">
+      <section class="form__inner-page">
+        <div class="form__wrapper">
           <h2 class="form__title">Запись на стрижку</h2>
+          <a class="form__return button form__return--show" href="index.html">На главную</a>
           <form class="form__forms" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="form__field form__field--fullname">
-              <legend class="visually-hidden">Ваше имя:</legend>
-              <label>
+            <div class="form__field form__field--fullname">
+              <h3 class="visually-hidden">Ваше имя:</h3>
+              <label for="surname">
                 <span class="visually-hidden">Фамиля</span>
-                <input type="text" name="surname" placeholder="Фамилия" >
+                <input id="surname" type="text" name="surname" placeholder="Фамилия" >
               </label>
-              <label>
+              <label for="name">
                 <span class="visually-hidden">Имя</span>
-                <input type="text" name="name" placeholder="Имя">
+                <input id="name" type="text" name="name" placeholder="Имя">
               </label>
               <label>
                 <span class="visually-hidden">Отчество</span>
                 <input type="text" name="surname2" placeholder="Отчество" >
               </label>
-            </fieldset>
-            <fieldset class="form__field form__field--contacts">
-              <legend class="visually-hidden">Ваши контакты:</legend>
+            </div>
+            <div class="form__field form__field--contacts">
+              <h3 class="visually-hidden">Ваши контакты:</h3>
               <label >
                 <span class="visually-hidden">Контактный телефон</span>
                 <input type="tel" name="phone" placeholder="Контактный телефон">
@@ -68,44 +82,44 @@
                 <span class="visually-hidden">Контактный e-mail</span>
                 <input type="email" name="email" placeholder="Контактный e-mail">
               </label>
-            </fieldset>
-            <fieldset class="form__field form__field--text">
-              <legend class="visually-hidden">Оставить комментарий</legend>
+            </div>
+            <div class="form__field form__field--text">
+              <h3 class="visually-hidden">Оставить комментарий</h3>
               <textarea name="comment" placeholder="Доп. информация для мастера"></textarea>
-            </fieldset>
+            </div>
 
-            <fieldset class="form__field  form__field--beard">
-              <legend>Выберите модель бороды:</legend>
+            <div class="form__field  form__field--beard">
+              <h3 class="form__field-title">Выберите модель бороды:</h3>
               <ul>
                 <li>
-                  <input id="beard-1" type="radio" name="beard" value="beard-1">
+                  <input id="beard-1" type="radio" name="beard" value="beard-1" checked>
                   <label for="beard-1">адмирал</label>
-                  <img src="http://placehold.it/150x100" alt="beard-type">
+                  <img src="img/beard-1.svg" alt="beard-type">
                 </li>
                 <li>
                   <input id="beard-2" type="radio" name="beard" value="beard-2">
                   <label for="beard-2">лесоруб</label>
-                  <img src="http://placehold.it/150x100" alt="beard-type">
+                  <img src="img/beard-2.svg" alt="beard-type">
                 </li>
                 <li>
                   <input id="beard-3" type="radio" name="beard" value="beard-3">
                   <label for="beard-3">полярник</label>
-                  <img src="http://placehold.it/150x100" alt="beard-type">
+                  <img src="img/beard-3.svg" alt="beard-type">
                 </li>
                 <li>
                   <input id="beard-4" type="radio" name="beard" value="beard-4">
                   <label for="beard-4">боярин</label>
-                  <img src="http://placehold.it/150x100" alt="beard-type">
+                  <img src="img/beard-4.svg" alt="beard-type">
                 </li>
                 <li>
                   <input id="beard-5" type="radio" name="beard" value="beard-5">
                   <label for="beard-5">мудрец</label>
-                  <img src="http://placehold.it/150x100" alt="beard-type">
+                  <img src="img/beard-5.svg" alt="beard-type">
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="form__field form__field--additional">
-              <legend class="form__title">Дополнительные услуги:</legend>
+            </div>
+            <div class="form__field form__field--additional">
+              <h3 class="form__field-title">Дополнительные услуги:</h3>
               <ul>
                 <li>
                   <input type="checkbox" id="offer-1" name="offer-1" checked>
@@ -132,17 +146,17 @@
                   <label for="offer-6">Отполировать лысину</label>
                 </li>
               </ul>
-            </fieldset>
-            <button class="button form__send" type="button">Отправить заявку</button>
+            </div>
+            <button class="button form__send" type="submit">Отправить заявку</button>
           </form>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__contacts contacts">
-          <b class="contatcs__title">Барбершоп «Бородинский»</b>
+          <b class="contatcs__title">Барбершоп Бородинский</b>
           <p class="contacts__text">
             г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
             <a class="contatcs__phone" href="">
@@ -165,11 +179,54 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработанно:</b>
+          <b class="copyright__text">Разработано:</b>
           <a class="button copyright__link" href="https://htmlacademy/intensive/adaptive">HTML Academy</a>
         </div>
       </div>
     </footer>
 
+    <section class="modal-login">
+      <h2 class="modal-login__title">Личный кабинет</h2>
+      <p class="modal-login__description">Введите свой логин и пароль, чтобы войти</p>
+      <form class="modal-login__form" action="#" method="post">
+        <p>
+          <label class="visually-hidden" for="user-login">Логин</label>
+          <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+        </p>
+        <p>
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+        </p>
+
+        <p class="modal-login__help">
+            <label class="modal-login__checkbox">
+              <input class="visually-hidden" type="checkbox" name="remember" >
+              <span class="checkbox-indicator"></span>
+                Запомните меня
+            </label>
+          <a class="restore" href="#">Я забыл пароль!</a>
+        </p>
+        <button class="modal-login__enter button" type="submit">Войти <span>в личный кабинет</span></button>
+        <button class="modal-login__close  button" type="button">Закрыть</button>
+      </form>
+    </section>
+
+    <section class="modal-failure">
+      <h2 class="modal-failure__title">Неудача</h2>
+      <p>
+        Что-то пошло не так. Проверьте выделенные красным поля формы.
+      </p>
+      <button class="modal-failure__close button">Ok</button>
+    </section>
+
+    <section class="modal-success">
+      <h2 class="modal-success__title">Это успех!</h2>
+      <p>
+      Ваша заявка отправлена.<br> Ожидайте, мы свяжемся с вами как только будет минутка.
+      </p>
+      <button class="modal-success__close button">Закрыть окно</button>
+    </section>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -31,6 +31,11 @@
     background-position: center -9px;
   }
 
+  .page-header__logo--inner {
+    height: 214px;
+    background-position: center center;
+  }
+
   .page-header__logo-image {
     display: block;
     width: 370px;
@@ -44,7 +49,7 @@
   .page-header__logo {
     height: 648px;
 
-    background-image: url("../img/back-desktop.jpg");
+    background-image: url("../img/back-tablet.jpg");
     background-position: center 0;
     background-size: cover;
   }
@@ -53,4 +58,7 @@
     margin-top: 57px;
   }
 
+  .page-header__logo--inner {
+    height: 308px;
+  }
 }
