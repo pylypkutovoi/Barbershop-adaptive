@@ -12,18 +12,22 @@
 
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
+      <a class="page-header__logo page-header__logo--inner" href="#">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+          <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
+        </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a>Главная</a>
-            </li>
             <li class="site-list__item">
-              <a href="photo.html">Наши работы</a>
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a>Наши работы</a>
             </li>
             <li class="site-list__item">
               <a href="form.html">Записаться</a>
@@ -52,67 +56,93 @@
       </nav>
     </header>
 
-    <main class="page-main">
+    <main class="inner-page">
+
+      <header class="page-title">
+        <h1 class="page-title__title">Наши работы</h1>
+        <a class="button page-title__return" href="index.html">На главную</a>
+      </header>
+
       <section class="works">
-        <h2 class="works__title">Наши работы</h2>
-        <a class="works__return button" href="index.html">На Главную</a>
-        <ul class="works__list">
-          <li class="works-item works-item--month">
-            <img class="works-item__image" src="http://placehold.it/150x100" alt="Пример работы">
-
-            <div class="works-item__review">
-              <h3 class="works-item__title">Лжепётр Мчиславский</h3>
-              <blockquote class="works-item__text">
+        <article class="works-item works-item--work-of-month">
+          <p class="works-item__image-wrapper">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg">
+              <img class="works-item__image" src="img/photo-1-mobile.jpg" alt="Пример работы">
+            </picture>
+          </p>
+          <div class="works-item__review">
+            <h2 class="works-item__title">Лжепётр Мчиславский</h2>
+            <blockquote class="works-item__text">
                 Где я только не стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
-              </blockquote>
-              <ul class="works-item__list">
-                <li class="works-item__service-item works-item__service-item--haircut">Стрижка</li>
-                <li class="works-item__service-item works-item__service-item--shaving">Бритье</li>
-                <li class="works-item__service-item works-item__service-item--mustache">Усы</li>
-              </ul>
-            </div>
-          </li>
-          <li class="works-item">
-            <img class="works-item__image" src="http://placehold.it/150x100" alt="Пример работы">
+            </blockquote>
+            <ul class="works-item__list">
+              <li class="works-item__service-item works-item__service-item--haircut">Стрижка</li>
+              <li class="works-item__service-item works-item__service-item--shaving">Бритье</li>
+              <li class="works-item__service-item works-item__service-item--mustache">Усы</li>
+            </ul>
+          </div>
+        </article>
 
-            <div class="works-item__review">
-              <h3 class="works-item__title">Саша Мальцев</h3>
-              <blockquote class="works-item__text">
+        <article class="works-item">
+          <p class="works-item__image-wrapper">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg">
+              <img class="works-item__image" src="img/photo-2-mobile.jpg" alt="Пример работы">
+            </picture>
+          </p>
+          <div class="works-item__review">
+            <h2 class="works-item__title">Саша Мальцев</h2>
+            <blockquote class="works-item__text">
                 Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
-              </blockquote>
-              <ul class="works-item__list">
-                <li class="works-item__service-item works-item__service-item--haircut">Стрижка</li>
-              </ul>
-            </div>
-          </li>
-          <li class="works-item">
-            <img class="works-item__image" src="http://placehold.it/150x100" alt="Пример работы">
+            </blockquote>
+            <ul class="works-item__list">
+              <li class="works-item__service-item works-item__service-item--haircut">Стрижка</li>
+            </ul>
+          </div>
+        </article>
 
-            <div class="works-item__review">
-              <h3 class="works-item__title">Владимир Иваныч</h3>
-              <blockquote class="works-item__text">
+        <article class="works-item">
+          <p class="works-item__image-wrapper">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg">
+              <img class="works-item__image" src="img/photo-3-mobile.jpg" alt="Пример работы">
+            </picture>
+          </p>
+          <div class="works-item__review">
+            <h2 class="works-item__title">Владимир Иваныч</h2>
+            <blockquote class="works-item__text">
                 К зимнему сезону — готов!
-              </blockquote>
-              <ul class="works-item__list">
-                <li class="works-item__service-item works-item__service-item--shaving">Борода</li>
-                <li class="works-item__service-item works-item__service-item--mustache">Усы</li>
-              </ul>
-            </div>
-          </li>
-          <li class="works-item">
-            <img class="works-item__image" src="http://placehold.it/150x100" alt="Пример работы">
+            </blockquote>
+            <ul class="works-item__list">
+              <li class="works-item__service-item works-item__service-item--shaving">Борода</li>
+              <li class="works-item__service-item works-item__service-item--mustache">Усы</li>
+            </ul>
+          </div>
+        </article>
 
-            <div class="works-item__review">
-              <h3 class="works-item__title">Винстон Синий</h3>
-              <blockquote class="works-item__text">
+        <article class="works-item">
+          <p class="works-item__image-wrapper">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg">
+              <img class="works-item__image" src="img/photo-4-mobile.jpg" alt="Пример работы">
+            </picture>
+          </p>
+          <div class="works-item__review">
+            <h2 class="works-item__title">Винстон Синий</h2>
+            <blockquote class="works-item__text">
                 Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!
-              </blockquote>
-              <ul class="works-item__list">
-                <li class="works-item__service-item works-item__service-item--haircut">Стрижка</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+            </blockquote>
+            <ul class="works-item__list">
+              <li class="works-item__service-item works-item__service-item--haircut">Стрижка</li>
+            </ul>
+          </div>
+        </article>
+
       </section>
 
       <section class="price">
@@ -189,21 +219,32 @@
       </div>
     </footer>
 
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
+    <section class="modal-login">
+      <h2 class="modal-login__title">Личный кабинет</h2>
+      <p class="modal-login__description">Введите свой логин и пароль, чтобы войти</p>
+      <form class="modal-login__form" action="#" method="post">
+        <p>
+          <label class="visually-hidden" for="user-login">Логин</label>
+          <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+        </p>
+        <p>
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+        </p>
 
-      navMain.classList.remove('main-nav--nojs');
+        <p class="modal-login__help">
+            <label class="modal-login__checkbox">
+              <input class="visually-hidden" type="checkbox" name="remember" >
+              <span class="checkbox-indicator"></span>
+                Запомните меня
+            </label>
+          <a class="restore" href="#">Я забыл пароль!</a>
+        </p>
+        <button class="modal-login__enter button" type="submit">Войти <span>в личный кабинет</span></button>
+        <button class="modal-login__close  button" type="button">Закрыть</button>
+      </form>
 
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    </section>
+    <script src="js/script.js"></script>
   </body>
 </html>
