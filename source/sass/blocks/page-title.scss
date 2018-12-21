@@ -3,7 +3,9 @@
   padding: 30px 0;
 
   color: #000000;
+  background-color: #f8f5f2;
   text-transform: uppercase;
+
 
   a {
     display: none;
@@ -22,6 +24,7 @@
 
   .page-title {
     display: flex;
+    position: relative;
     justify-content: space-between;
     padding-left: 64px;
     padding-right: 64px;
